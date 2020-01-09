@@ -1,7 +1,8 @@
 # mots_trackingonly_tools
 Tools and example for Challenge 3: Tracking Only (MOT+KITTI) of MOTChallenge 2020 (https://motchallenge.net/workshops/bmtt2020/tracking.html)
 
-In this challenge, you're given strong pre-computed detections with segmentation masks and your task is tracking only, i.e. you are only required to sub-select from the given masks, assign these consistent tracking IDs, and assign a score to each selected mask based on which overlapping masks will be combined (the final reslt must be non-overlapping).
+In this challenge, you're given strong pre-computed detections with segmentation masks and your task is tracking only, i.e. you are only required to sub-select from the given masks, assign these consistent tracking IDs, and assign a score to each selected mask based on which overlapping masks will be combined (the final result must be non-overlapping).
+We created the detections using the model Mask R-CNN X152 of Detectron2 and afterwards running refinement net (https://arxiv.org/abs/1807.09190) to improve the mask quality.
 
 Your tracker has to produce a txt format output. Each line has the following format:
 det_id track_id mask_merge_confidence
